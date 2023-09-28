@@ -9,7 +9,6 @@ namespace FujisuBackend.Models.JobOffer
         public string endDate { get; set; }
         public decimal fteWorkload { get; set; }
         public RemunerationType remunerationType { get; set; }
-        public string pageTitle { get; set; }
         public decimal remunerationGrossAmount { get; set; }
         public RemunerationCurrency remunerationCurrency { get; set; }
         public string probationaryPeriodStartDate { get; set; }

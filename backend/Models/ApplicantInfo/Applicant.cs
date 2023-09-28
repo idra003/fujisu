@@ -6,6 +6,6 @@ namespace FujisuBackend.Models.ApplicantInfo
         public string lastName { get; set; }
         public string nationalIdentityNumber { get; set; }
         public string dateOfBirth { get; set; }
-        public string gender { get; set; }
+        public Gender? gender { get; set; }
     }
 }

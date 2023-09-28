@@ -1,6 +1,6 @@
 namespace FujisuBackend.Models.ApplicantInfo
 {
-    public class Contract 
+    public class ContactInfo 
     {
         public string postalAddress { get; set; }
         public string phoneNumber { get; set; }
