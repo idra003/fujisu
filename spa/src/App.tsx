@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { PageLayout } from './components/PageLayout/PageLayout';
+import { Pages } from './Pages/Pages';
+import { BrowserRouter } from 'react-router-dom';
+import { MuiThemeContext, g_defaultAppTheme } from './helpers/muiHelper';
+import { IState, useState } from './react-hooks/useState';
+import { Theme, ThemeProvider } from '@mui/material';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/**
+ * Sets up the app and renders out the root component
+ */
+export default function App() {
+	/**
+     * Holds the theme of the app that is given to the Mui Theme Context so it can be updated
+     */
+    const _appTheme:IState<Theme>|null = useState(g_defaultAppTheme);
+	
+	return (
+		<MuiThemeContext.Provider value={_appTheme}>
+			<ThemeProvider theme={_appTheme.value}>
+				<BrowserRouter> 
+					<PageLayout>
+						<Pages />
+					</PageLayout>
+				</BrowserRouter>				
+			</ThemeProvider>
+		</MuiThemeContext.Provider>
+	);
 }
-
-export default App;

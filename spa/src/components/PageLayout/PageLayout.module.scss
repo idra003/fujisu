@@ -1,0 +1,21 @@
+.container { 
+    display: flex;
+    align-items: flex-start;   
+    min-height: 100vh;
+    justify-content: center; 
+    background-color: #efefef;
+
+    .app {
+        max-width: 1536px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0.5em;
+
+        .contents {
+            padding: 0.5em;
+        }
+        .header {
+            padding: 0.5em;
+        }
+    }
+}
