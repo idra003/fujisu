@@ -18,14 +18,14 @@ export function PersonDisplay(props:IPersonDisplayProps) {
             </Typography>
             <Grid container>
                 <Grid item xs={4}>
-                    <Typography variant="body1">{_translations?.phrases.IPerson_firstName}</Typography>
+                    <Typography variant="body1">{_translations?.phrases.IPersonBase_firstName}</Typography>
                 </Grid>
                 <Grid item xs={8}>
                     <Typography variant="body2">{ props.info?.firstName }</Typography>
                     
                 </Grid>
                 <Grid item xs={4}>
-                    <Typography variant="body1">{_translations?.phrases.IPerson_lastName}</Typography>
+                    <Typography variant="body1">{_translations?.phrases.IPersonBase_lastName}</Typography>
                 </Grid>
                 <Grid item xs={8}>
                     <Typography variant="body2">{ props.info?.lastName }</Typography>

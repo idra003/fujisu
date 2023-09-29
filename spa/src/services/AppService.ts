@@ -70,7 +70,9 @@ export class AppService implements IAppService {
         };
 
         const fetchResult:Response = await fetch(Format.text(SAVE_APPLICANT_ENDPOINT, token), options);
-        return await this._getResponse<IApplicantInfo>(fetchResult);
+        const ret:IApplicantInfo = await this._getResponse<IApplicantInfo>(fetchResult);
+        console.log(`SAVED-DATA: `, ret);
+        return ret;
     }
 }
 /**

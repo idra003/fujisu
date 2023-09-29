@@ -1,8 +1,8 @@
 import { ITranslations } from "./ITranslations";
 
 export const g_enGB:ITranslations = {
-    IPerson_firstName: "First name",
-    IPerson_lastName: "Last name",
+    IPersonBase_firstName: "First name",
+    IPersonBase_lastName: "Last name",
     offerRecipient: "Offer recipient",
 
     contract: "Contract",
@@ -31,4 +31,40 @@ export const g_enGB:ITranslations = {
 
     termsCheckboxLabel: "I have read the terms and conditions and accept the terms",
     acceptBtnLabel: "Accept",
+
+    IPerson_nationalIdentityNumber: "National identity number",
+    IPerson_dateOfBirth: "Date of birth",
+    IPerson_gender: "Gender",
+
+    personalData: "Personal information",
+    contactInfo: "Contact info",
+
+    IApplicantContactInfo_postalAddress: "Postal address",
+    IContactInfo_phoneNumber: "Phone number",
+    IContactInfo_emailAddress: "Email address",
+    IEmergencyContact_relationshipType: "Relationship type",
+
+    IBankAccount_recipientName: "Recipient name",
+    IBankAccount_iban: "IBAN",
+
+    RelationshipType_Child: "Child",
+    RelationshipType_Spouse: "Spouse",
+    RelationshipType_LifePartner: "Life partner",
+    RelationshipType_Father: "Father",
+    RelationshipType_Mother: "Mother",
+    RelationshipType_Grandfather: "Grandfather",
+    RelationshipType_Grandmother: "Grandmother",
+    RelationshipType_Brother: "Brother",
+    RelationshipType_Sister: "Sister",
+    RelationshipType_Uncle: "Uncle",
+    RelationshipType_Aunt: "Aunt",
+    RelationshipType_Nephew: "Nephew",
+    RelationshipType_Niece: "Niece",
+    RelationshipType_Friend: "Friend",
+    RelationshipType_Other: "Other",
+
+    bankAccountHeading: "Salary payment banking info",
+    emergencyContactHeading: "Emergency contact",    
+
+    saveInformation: "Save information",
 };

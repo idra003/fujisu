@@ -1,8 +1,8 @@
 import { ITranslations } from "./ITranslations";
 
 export const g_etEE:ITranslations = {
-    IPerson_firstName: "Eesnimi",
-    IPerson_lastName: "Perekonna nimi",
+    IPersonBase_firstName: "Eesnimi",
+    IPersonBase_lastName: "Perekonna nimi",
     offerRecipient: "Pakkumise saaja",
 
     contract: "Leping",
@@ -31,4 +31,40 @@ export const g_etEE:ITranslations = {
 
     termsCheckboxLabel: "Olen tööpakkumise läbi lugenud ja nõustun selle tingimustega",
     acceptBtnLabel: "Võttan vastu",
+
+    IPerson_nationalIdentityNumber: "Isikukood",
+    IPerson_dateOfBirth: "Sünniaeg",
+    IPerson_gender: "Sugu",
+
+    personalData: "Isikuandmed",
+    contactInfo: "Kontakt andmed",
+
+    IApplicantContactInfo_postalAddress: "Aadress",
+    IContactInfo_phoneNumber: "Telefon",
+    IContactInfo_emailAddress: "E-mail",
+    IEmergencyContact_relationshipType: "Roll",
+
+    IBankAccount_recipientName: "Saaja nimi",
+    IBankAccount_iban: "Pangakonto number (IBAN)",
+
+    RelationshipType_Child: "Laps",
+    RelationshipType_Spouse: "Abikaasa",
+    RelationshipType_LifePartner: "Elukaaslane",
+    RelationshipType_Father: "Isa",
+    RelationshipType_Mother: "Ema",
+    RelationshipType_Grandfather: "Vanaisa",
+    RelationshipType_Grandmother: "Vanaema",
+    RelationshipType_Brother: "Vend",
+    RelationshipType_Sister: "Õde",
+    RelationshipType_Uncle: "Onu",
+    RelationshipType_Aunt: "Tädi",
+    RelationshipType_Nephew: "Õe-/vennapoeg",
+    RelationshipType_Niece: "Õe-/vennatütar",
+    RelationshipType_Friend: "Sõber",
+    RelationshipType_Other: "Muu",
+
+    bankAccountHeading: "Palga laekumis info",
+    emergencyContactHeading: "Hädaabi kontakt",
+
+    saveInformation: "Säilita andmed",
 };
