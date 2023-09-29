@@ -9,7 +9,7 @@ namespace FujisuBackend.Data
             string token = "c3b10e23882d404cb4a56ff5eb1af7cc6c08da0f3053445ba53f06e63de6caa";
 
             JobOffer offer = new () {
-                pageTitle = "Tööpakkumin",
+                pageTitle = "Tööpakkumine",
                 businessName = "Marienthali Pruulikoda OÜ",
                 applicant = {
                     firstName = "Mari",
@@ -42,7 +42,7 @@ namespace FujisuBackend.Data
             offers.Add(token, offer);
 
             ApplicantInfo applicant = new () {
-                pageTitle = "Uue töötaja isikuandmete ankee",
+                pageTitle = "Uue töötaja isikuandmete ankeet",
                 applicant = {
                     firstName = "Mari",
                     lastName = "Maasikas",

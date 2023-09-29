@@ -1,0 +1,41 @@
+.languageIconContainer {
+    width: 2.8em;
+    height: 2.8em;
+    border: 1px solid #9c9c9c;
+    
+    display: inline-flex;
+    align-items: center;
+    border-radius: 2.8em;  
+    overflow: hidden;
+
+    position: relative;
+    /* box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); */
+    
+    opacity: 0.85;
+    cursor: pointer;
+    
+
+    .languageIcon {        
+        background-repeat: no-repeat;
+        background-size: 4.21em auto;
+        background-position: center center;
+
+        width: 4.21em;
+        height: 2.8em;
+    }
+    .languageIconET {
+        background-image: url(../../app-images/EE.svg);
+    }
+    .languageIconGB {
+        background-image: url(../../app-images/GB.svg);
+    }
+}
+
+.iconButton {
+    background: transparent !important;
+    padding: 0 0 0 0 !important;
+    margin: 0 0.25em !important;
+    border: 0px !important;
+    border-radius: 2.8em !important;
+    min-width: 0 !important;
+}

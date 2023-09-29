@@ -7,6 +7,11 @@ import { enUS, etEE } from '@mui/material/locale';
 import * as React from 'react';
 import { IState } from '../react-hooks/useState';
 
+declare module '@mui/material/Paper' {
+    interface PaperPropsVariantOverrides {
+        informationGroup: true,
+    }
+}
 
 /**
  * The MUI Theme options for AlphaPro EE
@@ -16,7 +21,24 @@ export const g_appThemeOptions:ThemeOptions = {
         primary: blueGrey,
         secondary: blue,
         divider: '#ccc'
-    }
+    },
+    typography: {
+        h1: {
+            fontSize: '20px'
+        }
+    },
+    components: {        
+        MuiCard: {
+            variants: [{
+                props: { variant: 'informationGroup' },
+                style: {
+                    padding: '1em',
+                    boxShadow: '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
+                    marginBottom: '1em'
+                }
+            }]
+        }
+    } 
 };
 /**
  * The theme for the application
