@@ -9,6 +9,7 @@ import { ApplicantContactInfo } from '../../components/ApplicantContactInfo/Appl
 import { ApplicantBankingInfo } from '../../components/ApplicantBankingInfo/ApplicantBankingInfo';
 import { ApplicantEmergencyContactInfo } from '../../components/ApplicantEmergencyContactInfo/ApplicantEmergencyContactInfo';
 import { ApplicantInfoConfirmation } from '../../components/ApplicantInfoConfirmation/ApplicantInfoConfirmation';
+import { REVIEW_URI } from '../Pages';
 
 /**
  * Holds all the available URL params of the page
@@ -60,7 +61,17 @@ export function NewEmployeeForm(props:{}) {
             <ApplicantEmergencyContactInfo />
             <ApplicantInfoConfirmation 
                 onSave={() => {
-                    alert('SAVE');
+                    if(_applicant?.value) {
+                        _isLoading?.set(true); 
+                        g_service.saveApplicantInfo(_applicant?.value, _params.token || '').then((info:IApplicantInfo) => {
+                            _applicant?.set(info);
+                            _isLoading?.set(false);
+                            _navigate(REVIEW_URI);                            
+                        }).catch((e) => {
+                            _isLoading?.set(false);
+                            throw e;
+                        });
+                    }
                 }}
             />
         </Box>

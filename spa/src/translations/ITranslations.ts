@@ -68,4 +68,8 @@ export interface ITranslations {
     emergencyContactHeading:string;
 
     saveInformation:string;
+    notEstNationalCodeErrorMessage:string;
+
+    successHeading:string;
+    successMessage:string;
 }

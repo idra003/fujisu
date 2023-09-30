@@ -5,7 +5,6 @@ import { ApplicantContext } from '../../App';
 import * as _ from 'lodash';
 import { IApplicantInfo } from '../../models/IApplicantInfo';
 import { RelationshipType } from '../../models/RelationshipType';
-import { g_getEnumValues } from '../../helpers/generalHelpers';
 import { ITranslations } from '../../translations/ITranslations';
 
 const RELATIONSHIP_TYPE_ID:string = '505957bb-7934-441f-b978-9ed829531f53';

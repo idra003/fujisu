@@ -67,4 +67,8 @@ export const g_etEE:ITranslations = {
     emergencyContactHeading: "Hädaabi kontakt",
 
     saveInformation: "Säilita andmed",
+    notEstNationalCodeErrorMessage: "Ei ole eesti isikukood",
+
+    successHeading: "Tehtud",
+    successMessage: "Oled edukalt täitnud vajalikud andmed ja oleks üks samm ligemal uutele kogemustele",
 };

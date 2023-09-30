@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { JobOffer } from "./JobOffer/JobOffer";
 import { Home } from "./Home/Home";
 import { NewEmployeeForm } from "./NewEmployeeForm/NewEmployeeForm";
-import { Review } from "./Review/Review";
+import { Saved } from "./Saved/Saved";
 import { Format } from "../helpers/Format";
 
 /**
@@ -29,7 +29,7 @@ export function Pages() {
             <Route path={'/'} element={<Home />} />
             <Route path={Format.text(JOB_OFFER_URI, ':token')} element={<JobOffer />} />
             <Route path={Format.text(NEW_EMPLOYEE_FORM_URI, ':token')} element={<NewEmployeeForm />} />
-            <Route path={REVIEW_URI} element={<Review />} />
+            <Route path={REVIEW_URI} element={<Saved />} />
         </Routes>
     );
 }

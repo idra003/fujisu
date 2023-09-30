@@ -67,4 +67,8 @@ export const g_enGB:ITranslations = {
     emergencyContactHeading: "Emergency contact",    
 
     saveInformation: "Save information",
+    notEstNationalCodeErrorMessage: "Not an estionian national code",
+
+    successHeading: "Success",
+    successMessage: "You have completed the form and are on your way to this oppurtunity",
 };

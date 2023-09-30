@@ -4,6 +4,10 @@ import { TranslationsContext } from '../../translations/TranslationsContext';
 import { ApplicantContext } from '../../App';
 import * as _ from 'lodash';
 import { IApplicantInfo } from '../../models/IApplicantInfo';
+import { stdnum } from 'stdnum';
+import { Gender } from '../../models/Gender';
+import { g_getMaleFromEstCode, g_getPersionBirthDay } from '../../helpers/generalHelpers';
+
 
 /**
  * Renders out the applicant info input form
@@ -11,7 +15,17 @@ import { IApplicantInfo } from '../../models/IApplicantInfo';
 export function ApplicantInfo(props:{}) {
     const _translations = React.useContext(TranslationsContext);
     const _applicant = React.useContext(ApplicantContext);
-    
+
+    const _nationalCode:string = _applicant?.value?.applicant.nationalIdentityNumber || '';
+    const _isNationalCodeInError = (
+        isNaN(_nationalCode as any)
+        || (
+            !isNaN(_nationalCode as any) 
+            && (_nationalCode.trim()).length >= 11
+            && !stdnum.EE.ik.validate(_nationalCode).isValid
+        )
+    );
+
     return (
         <Card variant='informationGroup'>
             <Typography
@@ -58,9 +72,17 @@ export function ApplicantInfo(props:{}) {
                         const newData:IApplicantInfo|null = _.cloneDeep(_applicant?.value || null);
                         if(newData) {
                             newData.applicant.nationalIdentityNumber = newValue;
+
+                            if(stdnum.EE.ik.validate(newValue).isValid) {
+                                newData.applicant.gender = g_getMaleFromEstCode(newValue);
+                                newData.applicant.dateOfBirth = g_getPersionBirthDay(newValue)?.toISOString() || '';
+                            }
+
                             _applicant?.set(newData);
                         }
                     }}
+                    error={_isNationalCodeInError}
+                    helperText={_isNationalCodeInError ? _translations?.phrases.notEstNationalCodeErrorMessage : ''}
                 />
             </Stack>
         </Card>
