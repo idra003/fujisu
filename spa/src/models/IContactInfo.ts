@@ -5,10 +5,10 @@ export interface IContactInfo {
     /**
      * The phone number of the persion
      */
-    phoneNumber:string;
+    phoneNumber:string|null;
     /**
      * The email address of the persion
      */
-    emailAddress:string;
+    emailAddress:string|null;
 }
 

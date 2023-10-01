@@ -8,11 +8,11 @@ export interface IPerson extends IPersonBase {
     /**
      * The national ID of the person
      */
-    nationalIdentityNumber:string;
+    nationalIdentityNumber:string|null;
     /**
      * The date of birth of the applicant in ISO form
      */
-    dateOfBirth:string;
+    dateOfBirth:string|null;
     /**
      * The gender of the applicant
      */

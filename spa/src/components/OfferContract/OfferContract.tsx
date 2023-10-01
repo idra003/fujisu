@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styles from './OfferContract.module.scss';
 import { Card, Grid, Typography } from "@mui/material";
-import { JobOfferContext } from '../../App';
 import { TranslationsContext } from '../../translations/TranslationsContext';
 import { IContract } from '../../models/IContract';
 import { ITranslations } from '../../translations/ITranslations';
 import { Format } from '../../helpers/Format';
+import { JobOfferContext } from '../../contexts/JobOfferProvider';
 
 /**
  * Renders out the contract info offered to the applicant
@@ -106,8 +106,8 @@ export function OfferContract(props:{}) {
                     </Typography>
                     <ul className={styles.benefits}>
                         {
-                            _offer?.value?.benefits.map((str:string) => (
-                                <li>{str}</li>
+                            _offer?.value?.benefits.map((str:string, index:number) => (
+                                <li key={index}>{str}</li>
                             ))
                         }
                     </ul>

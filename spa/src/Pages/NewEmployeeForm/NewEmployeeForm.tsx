@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useNavigate, useParams } from "react-router-dom";
-import { ApplicantContext, IsLoadingContext, TitleContext } from '../../App';
 import { g_service } from '../../services/AppService';
 import { IApplicantInfo } from '../../models/IApplicantInfo';
 import { Box } from '@mui/material';
@@ -10,6 +9,9 @@ import { ApplicantBankingInfo } from '../../components/ApplicantBankingInfo/Appl
 import { ApplicantEmergencyContactInfo } from '../../components/ApplicantEmergencyContactInfo/ApplicantEmergencyContactInfo';
 import { ApplicantInfoConfirmation } from '../../components/ApplicantInfoConfirmation/ApplicantInfoConfirmation';
 import { REVIEW_URI } from '../Pages';
+import { ApplicantContext } from '../../contexts/ApplicantProvider';
+import { IsLoadingContext } from '../../contexts/IsLoadingProvider';
+import { TitleContext } from '../../contexts/PageTitleProvider';
 
 /**
  * Holds all the available URL params of the page

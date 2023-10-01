@@ -5,9 +5,9 @@ export interface IPersonBase {
     /**
      * The first name of the person
      */
-    firstName:string;
+    firstName:string|null;
     /**
      * The last name of the person
      */
-    lastName:string;
+    lastName:string|null;
 }

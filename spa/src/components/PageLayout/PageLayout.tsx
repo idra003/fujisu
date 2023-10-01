@@ -1,11 +1,10 @@
 import styles from './PageLayout.module.scss';
-
 import { AppBar, Box, CircularProgress, Divider, Paper, Typography } from '@mui/material';
 import * as React from 'react';
 import { Loader } from '../Loader/Loader';
 import { Header } from '../Header/Header';
-import { IsLoadingContext, TitleContext } from '../../App';
-
+import { TitleContext } from '../../contexts/PageTitleProvider';
+import { IsLoadingContext } from '../../contexts/IsLoadingProvider';
 
 /**
  * Renders out the main layout of the page

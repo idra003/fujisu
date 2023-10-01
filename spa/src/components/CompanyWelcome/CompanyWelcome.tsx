@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { JobOfferContext } from '../../App';
 import { Card, Typography } from '@mui/material';
+import { JobOfferContext } from '../../contexts/JobOfferProvider';
 
 /**
  * Renders out the company welcome on the offers page

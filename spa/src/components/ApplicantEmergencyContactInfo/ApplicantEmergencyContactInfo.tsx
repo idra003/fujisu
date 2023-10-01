@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Card, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Stack, TextField, Typography } from "@mui/material";
 import { TranslationsContext } from '../../translations/TranslationsContext';
-import { ApplicantContext } from '../../App';
 import * as _ from 'lodash';
 import { IApplicantInfo } from '../../models/IApplicantInfo';
 import { RelationshipType } from '../../models/RelationshipType';
 import { ITranslations } from '../../translations/ITranslations';
+import { ApplicantContext } from '../../contexts/ApplicantProvider';
 
 const RELATIONSHIP_TYPE_ID:string = '505957bb-7934-441f-b978-9ed829531f53';
 

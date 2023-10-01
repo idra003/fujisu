@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { TitleContext } from '../../App';
 import { TranslationsContext } from '../../translations/TranslationsContext';
 import { Box, Typography } from '@mui/material';
+import { TitleContext } from '../../contexts/PageTitleProvider';
 
 /**
  * Renders out the applicant review page i.e. shows the successfuly saved page

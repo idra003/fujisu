@@ -28,7 +28,6 @@ export function g_isApplicanInfoComplete(info:IApplicantInfo|null|undefined):boo
             && (info.emergencyContact.lastName || '').trim()
             && info.emergencyContact.relationshipType
             && (info.emergencyContact.phoneNumber || '').trim()
-            && (info.emergencyContact.emailAddress || '').trim()
         );
         return ret;
     }
@@ -61,8 +60,13 @@ export function g_getPersionBirthDay(code:string):Date|null {
     }
     const genderMarker:number = Number(code[0]);    
     const year:number = Number(code[1] + code[2]);
-    const thousand:number = 1800 * ((Math.floor(genderMarker / 2) - (genderMarker % 2)) * 100);
+    const thousand:number = 1800 + ((Math.floor(genderMarker / 2) - (genderMarker % 2) ) * 100);
     const month:number = Number(code[3] + code[4]);
     const day:number = Number(code[5] + code[6]);
     return new Date(thousand + year, month - 1, day);
 }
+/**
+ * Does a millisecond delay for a async function
+ * @param ms The milliseconds you want to delay
+ */
+export const g_delay = (ms:number):Promise<void> => new Promise(res => setTimeout(res, ms));

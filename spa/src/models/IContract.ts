@@ -25,7 +25,7 @@ export interface IContract {
     /**
      * The end date of the job in ISO form
      */
-    endDate:string;
+    endDate:string|null;
     /**
      * A number from 0 - 1, indicating if this is a full time position or not
      */

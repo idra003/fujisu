@@ -9,5 +9,5 @@ export interface IBankAccount {
     /**
      * The IBAN of the account
      */
-    iban:string;
+    iban:string|null;
 }

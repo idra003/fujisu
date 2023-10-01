@@ -42,10 +42,14 @@ export class AppService implements IAppService {
             method: 'get',
             headers: new Headers(),
             body: null,
-        };
+        };        
 
         const fetchResult:Response = await fetch(Format.text(GET_JOB_ENDPOINT, token), options);
-        return await this._getResponse<IJobOffer>(fetchResult);
+        const ret:IJobOffer = await this._getResponse<IJobOffer>(fetchResult);
+
+        console.log(`JOB-OFFER: `, JSON.stringify(ret));
+
+        return ret;
     }
     public getApplicantInfo = async (token:string):Promise<IApplicantInfo> => {
 
@@ -56,7 +60,9 @@ export class AppService implements IAppService {
         };
 
         const fetchResult:Response = await fetch(Format.text(GET_APPLICANT_ENDPOINT, token), options);
-        return await this._getResponse<IApplicantInfo>(fetchResult);
+        const ret:IApplicantInfo = await this._getResponse<IApplicantInfo>(fetchResult);
+        console.log(`APPLICANT: `, JSON.stringify(ret));
+        return ret;
     }
     public saveApplicantInfo = async (info:IApplicantInfo, token:string):Promise<IApplicantInfo> => {
 
@@ -71,7 +77,7 @@ export class AppService implements IAppService {
 
         const fetchResult:Response = await fetch(Format.text(SAVE_APPLICANT_ENDPOINT, token), options);
         const ret:IApplicantInfo = await this._getResponse<IApplicantInfo>(fetchResult);
-        console.log(`SAVED-DATA: `, ret);
+        console.log(`SAVED-DATA: `, JSON.stringify(ret), ret);
         return ret;
     }
 }

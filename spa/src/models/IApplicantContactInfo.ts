@@ -7,5 +7,5 @@ export interface IApplicantContactInfo extends IContactInfo {
     /**
      * The address of the person
      */
-    postalAddress:string;
+    postalAddress:string|null;
 }

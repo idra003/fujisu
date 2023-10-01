@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Card, Stack, TextField, Typography } from "@mui/material";
 import { TranslationsContext } from '../../translations/TranslationsContext';
-import { ApplicantContext } from '../../App';
 import * as _ from 'lodash';
 import { IApplicantInfo } from '../../models/IApplicantInfo';
+import { ApplicantContext } from '../../contexts/ApplicantProvider';
 
 /**
  * Renders out the applicant contact info input form

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 import { g_service } from '../../services/AppService';
 import { IJobOffer } from '../../models/IJobOffer';
-import { IsLoadingContext, JobOfferContext, TitleContext } from '../../App';
 import { CompanyWelcome } from '../../components/CompanyWelcome/CompanyWelcome';
 import { PersonDisplay } from '../../components/PersonDisplay/PersonDisplay';
 import { OfferContract } from '../../components/OfferContract/OfferContract';
@@ -10,6 +9,9 @@ import { Box } from '@mui/material';
 import { Confirmation } from '../../components/Confirmation/Confirmation';
 import { Format } from '../../helpers/Format';
 import { NEW_EMPLOYEE_FORM_URI } from '../Pages';
+import { JobOfferContext } from '../../contexts/JobOfferProvider';
+import { IsLoadingContext } from '../../contexts/IsLoadingProvider';
+import { TitleContext } from '../../contexts/PageTitleProvider';
 
 /**
  * Holds all the available URL params of the page
